@@ -11,6 +11,7 @@ interface Post {
 }
 
 function App() {
+  // 
   const { data, error, loading } = useFetch<Post>(url);
 
   if (loading) {
