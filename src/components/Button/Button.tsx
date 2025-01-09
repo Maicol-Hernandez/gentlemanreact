@@ -1,14 +1,23 @@
+import { ReactNode } from 'react'
 import './Button.css'
 
 interface Props {
-    label: string,
+    children: ReactNode,
     perentMethod: () => void
 }
 
-export const Button = ({ label, perentMethod }: Props) => {
+interface ChildrenProps {
+    children: ReactNode
+}
+
+export const ColorRed = ({ children }: ChildrenProps) => {
+    return (<div className="color-red">{children}</div>)
+}
+
+export const Button = ({ children, perentMethod }: Props) => {
     return (
         <button className="custom-button" onClick={perentMethod}>
-            {label}
+            {children}
         </button>
     )
 }
