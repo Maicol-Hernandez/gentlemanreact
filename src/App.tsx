@@ -11,8 +11,8 @@ interface Post {
 }
 
 function App() {
-  // 
   const { data, error, loading } = useFetch<Post>(url);
+  // const { data: dataUser, error: errorUser, loading: loadingUser } = useFetch<{ name: string }>(url);
 
   if (loading) {
     return <div>Loading...</div>
