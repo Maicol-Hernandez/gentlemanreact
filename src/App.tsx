@@ -1,5 +1,6 @@
 import './App.css'
 import { Button, ColorRed } from './components'
+import { GlobalProvider } from './context/global.provider';
 
 function App() {
 
@@ -12,10 +13,10 @@ function App() {
   };
 
   return (
-    <>
+    <GlobalProvider>
       <ColorRed><Button perentMethod={handleGreet}>My Button/Red</Button></ColorRed>
       <Button perentMethod={handleClick}>My Button/Normal</Button>
-    </>
+    </GlobalProvider>
   )
 }
 
