@@ -1,22 +1,14 @@
 import './App.css'
-import { Button, ColorRed } from './components'
-import { GlobalProvider } from './context/global.provider';
+import { PhoneBook } from './components'
 
 function App() {
-
-  const handleClick = () => {
-    console.log('uy me clickio todo :>> ');
-  }
-
-  const handleGreet = () => {
-    alert('Hello!');
-  };
-
   return (
-    <GlobalProvider>
-      <ColorRed><Button perentMethod={handleGreet}>My Button/Red</Button></ColorRed>
-      <Button perentMethod={handleClick}>My Button/Normal</Button>
-    </GlobalProvider>
+    <>
+      {/* <BookReader />
+      <FocusInput /> */}
+      {/* <ShoppingCart /> */}
+      <PhoneBook />
+    </>
   )
 }
 
